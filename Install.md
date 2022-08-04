@@ -3,16 +3,24 @@
 ```
 pip install Django==4.0  
 ```
-##### バージョンを確認
+
+- **Version 確認**
+
 ```
 python -m django --version
 ```
+
+### To activate virtualen
+
+`virtualenv newenv -p python3`
+
+`source newenv/bin/activate`
 
 ### PostgreSQLを使用するための準備 (WSL)
 
 `pip install psycopg2==2.8.6`
 
-- Version 確認
+- **Version 確認**
 
 `pip list`
 
@@ -41,7 +49,7 @@ Project
 `python manage.py startapp アプリケーション名`
 >python manage.py startapp blog
 
-##### サーバーを起動する
+### サーバーを起動する
 
 `python manage.py runserver`
 
