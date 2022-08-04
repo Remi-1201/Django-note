@@ -108,13 +108,13 @@
 
 ### Errors
 
->`Error loading psycopg2 module: No module named 'psycopg2'`
+>Error loading psycopg2 module: No module named 'psycopg2'
 
 `pip3 install psycopg2==2.8.6 --user`
 
 `pip3 install psycopg2-binary --user`
 
->`Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable?`
+>Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable?
 
 `virtualenv newenv -p python3`
 
