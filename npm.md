@@ -1,4 +1,9 @@
-## npmを使ったインストール
+# npmと関連するコマンドについて
+
+- npm(Node Package Manager)とは、Node.jsのパッケージを管理するツール（パッケージマネージャ）です。
+- npmのようなパッケージマネージャを使用することでパッケージのインストールや管理を行うことができます。
+
+## 1. npmを使ったインストール
 
 - npm installにはグローバルインストールとローカルインストールがあります。
 
@@ -8,7 +13,7 @@ npm i {パッケージ名}
 npm add {パッケージ名}
 ```
 
-### グローバルインストール
+### 1.1 グローバルインストール
 
 - グローバルインストールすると、PCのどのディレクトリからも使用できるようになります。
   - root配下にあるnode_modulesというディレクトリにパッケージがインストールされます。
@@ -18,7 +23,7 @@ npm install --global {パッケージ名}
 npm install -g {パッケージ名}
 ```
 
-### ローカルインストール
+### 1.2 ローカルインストール
 
 - ローカルインストールでインストールをすると、カレントディレクトリの中の`node_modules`にインストールされ、<br>
 `package.json`の`dependencies`に記述されます。
@@ -29,19 +34,19 @@ npm install -S {パッケージ名}
 ```
 >npm 5.0.0 以降からは、--saveオプションをつけなくてもデフォルトでカレントディレクトリにインストールするようになっています
 
-### package.jsonのすべてのパッケージをインストール
+### 1.3 package.jsonのすべてのパッケージをインストール
 
 ```
 npm install
 ```
 
-## package.jsonとバージョン
+## 2. package.jsonとバージョン
 
 - package.jsonは、パッケージの情報が記載されたファイルです。
 
-- package.jsonが存在することによって、npmが管理できるパッケージ になります。
+  - package.jsonが存在することによって、npmが管理できるパッケージ になります。
 
-- package.jsonはnpm initコマンドで作成できます。
+  - package.jsonはnpm initコマンドで作成できます。
 
 ```
 mkdir test-project //ディレクトリを作成
@@ -51,6 +56,19 @@ cd test-project  //ディレクトリに移動
 npm init  //package.json の生成
 ```
 
+- package.jsonの例
+
+```package.json
+{
+  // 省略
+  "dependencies": {
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0"
+  }
+}
+```
 
 - バージョン指定のパッケージインストール
 
@@ -60,3 +78,7 @@ npm install {パッケージ名}@バージョン
 //例
 npm install react-chartjs-2@3.3.0
 ```
+
+## 参考資料
+
+- [DIVE INTO CODE - Webエンジニア ステップアップコース（Python）テキスト 【npmの機能と仕組み】](https://diver.diveintocode.jp/curriculums/2627)
