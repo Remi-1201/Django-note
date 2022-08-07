@@ -43,8 +43,7 @@ npm install -g {パッケージ名}
 
 ### 1.2 ローカルインストール
 
-- ローカルインストールでインストールをすると、カレントディレクトリの中の`node_modules`にインストールされ、<br>
-`package.json`の`dependencies`に記述されます。
+- ローカルインストールでインストールをすると、カレントディレクトリの中の`node_modules`にインストールされ、`package.json`の<mark>dependencies</mark>に記述されます。
 
 ```
 npm install --save {パッケージ名}
@@ -53,7 +52,7 @@ npm install -S {パッケージ名}
 ```
 >npm 5.0.0 以降からは、--saveオプションをつけなくてもデフォルトでカレントディレクトリにインストールするようになっています
 
-- `package.json` の `devDependencies` に追加するとき `--save-dev` (= `-D`)
+- `package.json` の <mark>devDependencies</mark> に追加するとき `--save-dev` (= `-D`)
 
 ```
 npm install --save-dev <package>
@@ -120,3 +119,4 @@ npm install {パッケージ名}@latest
 ## 3. 参考資料
 
 - [DIVE INTO CODE - Webエンジニア ステップアップコース（Python）テキスト 【npmの機能と仕組み】](https://diver.diveintocode.jp/curriculums/2627)
+- [Qiita - そろそろ適当に npm install するのを卒業する](https://qiita.com/sugurutakahashi12345/items/3cc49926faeaf25d3051)
