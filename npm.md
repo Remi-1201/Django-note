@@ -1,7 +1,22 @@
-# npmと関連するコマンドについて
+この間はフロント開発を通してnpmを扱う機会が多くなりましたので、この記事ではnpmの基本概念とよく使うコマンドをまとめておきます。
+
+---
 
 - npm(Node Package Manager)とは、Node.jsのパッケージを管理するツール（パッケージマネージャ）です。
+>Node.js とはサーバサイドで動く JavaScript のことです。
+
+```
+# Node.js のバージョン確認
+node -v       
+```
 - npmのようなパッケージマネージャを使用することでパッケージのインストールや管理を行うことができます。
+```
+# npm のバージョン確認
+npm -v     
+
+# npm のアップデート
+npm update -g npm
+```
 
 ## 1. npmを使ったインストール
 
@@ -9,7 +24,9 @@
 
 ```
 npm install {パッケージ名}
+
 npm i {パッケージ名}
+
 npm add {パッケージ名}
 ```
 
@@ -20,6 +37,7 @@ npm add {パッケージ名}
 
 ```
 npm install --global {パッケージ名}
+
 npm install -g {パッケージ名}
 ```
 
@@ -30,15 +48,26 @@ npm install -g {パッケージ名}
 
 ```
 npm install --save {パッケージ名}
+
 npm install -S {パッケージ名}
 ```
 >npm 5.0.0 以降からは、--saveオプションをつけなくてもデフォルトでカレントディレクトリにインストールするようになっています
+
+- `package.json` の `devDependencies` に追加するとき `--save-dev` (= `-D`)
+
+```
+npm install --save-dev <package>
+
+npm install -D <package>
+```
 
 ### 1.3 package.jsonのすべてのパッケージをインストール
 
 ```
 npm install
 ```
+
+---
 
 ## 2. package.jsonとバージョン
 
@@ -79,6 +108,15 @@ npm install {パッケージ名}@バージョン
 npm install react-chartjs-2@3.3.0
 ```
 
-## 参考資料
+-  最新版を指定する場合
+> @latest とつけなくても指定しなければ最新版がインストールされる
+
+```
+npm install {パッケージ名}@latest
+```
+
+---
+
+## 3. 参考資料
 
 - [DIVE INTO CODE - Webエンジニア ステップアップコース（Python）テキスト 【npmの機能と仕組み】](https://diver.diveintocode.jp/curriculums/2627)
